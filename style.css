@@ -183,10 +183,6 @@ span{
 }
 
 
-
-
-
-
 /*----------------------------------
              footer section
 ----------------------------  */
@@ -201,9 +197,12 @@ footer{
     align-items: center;
 }
 .football-logo{
+    display: flex;
+    justify-content: center;
     align-items: center;
 }
 .football-logo img{
+
     width: 400px;
     height: 110px;
     
