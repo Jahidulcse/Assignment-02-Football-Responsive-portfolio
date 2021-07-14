@@ -7,20 +7,26 @@ body{
 }
 /* -------------------------------------------------- */
 .header-section{
-    height: 677px;
     background-color: rgb(124, 122, 122);
-    margin-bottom: 80px;
+    margin-bottom: 40px;
 
 }
 .header-sub{
-    display: flex;
-    flex-direction: row;
+    display: grid;
+    grid-template-columns: repeat(2,1fr);
 }
 .half-width{
     display: flex;
-    width: 50%;
+    width: 100%;
+    align-items: center;
     justify-content: center;
-    margin-top: 100px;
+    flex-direction: column;
+    margin: 50px 0px;
+}
+.banner-text{
+    align-items: center;
+    justify-content: center;
+    justify-items: center;
 }
 
 #banner-title{
@@ -31,14 +37,27 @@ body{
     line-height: 80px;
 }
 button{
+    width: 230px;
     margin-top: 30px;
     font-size: 20px;
     background: #E02C6D;
-    padding: 15px 40px;
     text-decoration: none;
     color: #ffffff;
+    border: 0px;
+    padding: 15px 0px;
+
+
+    /* transition */
+    transition: width 1s ,transform 2s;
+
     
 }
+button:hover{
+    width: 300px;
+
+}
+
+
 .fa-arrow-right{
     padding-left: 10px;
     font-size: 20px;
@@ -47,8 +66,12 @@ button{
 #football-banner{
     width: 556px;
     height: 438px;
+    transition: 2s ,transform 2s ;
 }
-
+#football-banner:hover{
+    transform: scale(1.2);
+   
+}
 
 
 
@@ -56,14 +79,24 @@ button{
 /*-------------------------
           player section
 ---------------------------- */
+
+
 .container{
 
+}
+.top-12{
+    text-align: center;
+    font-size: 45px;
+    font-weight: 700;
+    margin-bottom: 40px;
+    text-shadow: 5px 5px 15px rgb(29, 71, 71) ;
 }
 .top-players{
     display: grid;
     grid-template-columns: repeat(3, 1fr);
     grid-row-gap:60px;
     justify-items: center;
+
 }
 .player{
   height: 474px;
@@ -89,6 +122,13 @@ article > p{
     color:gray;
     font-size: 12px;
     margin-top: 15px;
+}
+
+
+
+/* Tansfor */
+.transform{
+
 }
 
 /* End The top player section */
@@ -123,4 +163,33 @@ footer{
 }
 .copy-right{
     text-align: center;
+}
+
+
+
+
+
+/*----------------------------------
+          Responsive Layout
+------------------------------------- */
+@media only screen and (max-width: 600px) {
+
+    .header-sub{
+        width: 100%;
+        display: grid;
+        grid-template-columns: repeat(1,1fr);
+        justify-content: center;
+        align-items: center;
+    }
+
+    .top-players{
+        width: 100%;
+        display: grid;
+        grid-template-columns: repeat(1,1fr);
+        align-self: center;
+        justify-self: center;
+    }
+
+    
+    
 }
